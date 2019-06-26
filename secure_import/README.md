@@ -2,7 +2,7 @@
 
 ## Usage
 
-1. Download and unzip the binary that is compatible with your operating system
+1. Download and un-tar the binary that is compatible with your operating system
 
 2. Mark the file as executable using `chmod`
 
