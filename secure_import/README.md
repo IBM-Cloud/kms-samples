@@ -1,6 +1,6 @@
 # kms-encrypt-nonce
 
-##Usage
+## Usage
 
 1. Download and unzip the binary that is compatible with your operating system
 
