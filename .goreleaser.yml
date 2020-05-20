@@ -1,0 +1,49 @@
+project_name: kms-encrypt-nonce
+env:
+  - GO111MODULE=on
+release:
+  prerelease: true
+builds:
+  - id: secure-import
+    env:
+      - CGO_ENABLED=0
+    main: secure-import/encrypt.go
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - 386
+      - amd64
+      - arm64
+      - arm
+    goarm:
+      - 7
+    flags:
+      - -trimpath
+
+archives:
+- name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+  replacements:
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+    bit: Arm
+    bitv6: Arm6
+    bitv7: Arm7
+    386: i386
+    amd64: x86_64
+  format_overrides:
+  - goos: windows
+    format: zip
+
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
