@@ -31,4 +31,4 @@ A lightweight tool to encrypt nonce with AES-GCM or AES-CBC encryption on a nonc
     ```
 
 ## Build / run from source
-You need a [Go](https://golang.org/) build environment and the source file [encrypt.go](encrypt.go) from this directory. Either directly execute `go run encrypt.go` to run the code or first build (`go build -o kms-encrypt-nonce -i encrypt.go) the executable, then run it with parameters as shown above.
+You need a [Go](https://golang.org/) build environment and the source file [encrypt.go](encrypt.go) from this directory. Either directly execute `go run encrypt.go` to run the code or first build (`go build -o kms-encrypt-nonce -i encrypt.go`) the executable, then run it with parameters as shown above.
